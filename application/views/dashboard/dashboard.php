@@ -1,6 +1,6 @@
 <div class="row g-3 mb-4">
     <div class="col-md-3">
-        <div>
+        <div class="card text-white bg-primary shadow-sm">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="col-md-3">
-        <div>
+        <div class="card text-white bg-success shadow-sm">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="col-md-3">
-        <div>
+        <div class="card text-white bg-info shadow-sm">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
@@ -39,8 +39,8 @@
         </div>
     </div>
     <div>
-        <div>
-            <div class="card-body">
+        <div class="col-md-3">
+            <div class="card-body text-white bg-secondary shadow-sm">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <p class="mb-0 small">Total Kategori</p>
