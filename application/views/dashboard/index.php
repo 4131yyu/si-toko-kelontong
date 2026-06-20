@@ -7,6 +7,9 @@
                         <p class="mb-0 small">Transaksi Hari Ini</p>
                         <h3 class="mb-0"><?= $total_transaksi ?></h3>
                     </div>
+                    <div>
+                        <i class="bi bi-receipt" style="font-size:2rem;"></i>
+                    </div>
 
                 </div>
 
