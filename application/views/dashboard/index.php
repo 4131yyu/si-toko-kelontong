@@ -18,6 +18,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <p class="mb-0 small">Omzet Hari Ini</p>
+                                <h5 class="mb-0">Rp <?= number_format($omzet_hari_ini, 0, ',', '.') ?></h5>
                             </div>
 
                         </div>
