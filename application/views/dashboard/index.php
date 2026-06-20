@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <p class="mb-0 small">Omzet Hari ini</p>
+                                <p class="mb-0 small">Omzet Hari Ini</p>
                             </div>
 
                         </div>
