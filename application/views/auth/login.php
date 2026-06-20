@@ -16,6 +16,10 @@
                 <p class="text-muted small">Sistem Informasi Manajemen</p>
             </div>
 
+            <?php if ($this->session->flashdata('error')): ?>
+                <div class="alert alert-danger py-2><?= $this->session->flashdata('error') ?></div>
+            <?php endif; ?>
+
             <form action="<?= base_url('Auth/login') ?>" method="post">
                 <div class="mb-3">
                     <label class="form-label">Username</label>
