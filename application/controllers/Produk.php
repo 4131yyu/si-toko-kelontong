@@ -6,7 +6,7 @@ class Produk extends CI_Controller {
         parent::__construct();
         if (!$this->session->userdata('logged_in')) redirect('Auth');
         if ($this->session->userdata('role') !== 'admin') redirect('Dashboard');
-        $this->load->model(['M_Produk', 'M_Kategori']);
+        $this->load->model(['Produk', 'Kategori']);
     }
 
     public function index() {
