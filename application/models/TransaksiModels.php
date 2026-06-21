@@ -36,4 +36,11 @@ class TransaksiModels extends CI_Model {
         $this->db->where('DATE(tgl_transaksi)', date('Y-m-d'));
         return $this->db->count_all_results('transaksi');
     }
+    public function omzet_hari_ini() {
+        $this->db->select_sum('total_harga');
+        $this->db->where('DATE(tgl_transaksi)', date('Y-m-d'));
+        $row = $this->db->get('transaksi')->row();
+        return $row->total_harga ?? 0;
+    }
+    
 }
