@@ -32,4 +32,8 @@ class TransaksiModels extends CI_Model {
         $this->db->order_by('transaksi.tgl_transaksi', 'DESC');
         return $this->db->get()->result();
     }
+     public function total_hari_ini() {
+        $this->db->where('DATE(tgl_transaksi)', date('Y-m-d'));
+        return $this->db->count_all_results('transaksi');
+    }
 }
