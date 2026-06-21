@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sistem Informasi Toko Kelontong</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap-icons.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap-icons/bootstrap-icons.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 </head>
-<body>
+<body class="d-flex align-items-center justify-content-center" style="min-height:100vh; background:#2E75B6;>
     <div class="card shadow-lg border-0" style="width:380px;">
         <div class="card-body p-5">
             <div class="text-center mb-4">
