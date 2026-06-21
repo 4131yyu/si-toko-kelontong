@@ -23,4 +23,13 @@ class TransaksiModels extends CI_Model {
         $this->db->where('detail_transaksi.id_transaksi', $id_transaksi);
         return $this->db->get()->result();
     }
+    public function get_by_tanggal($tgl_awal, $tgl_akhir) {
+        $this->db->select('transaksi.*, users.nama_lengkap');
+        $this->db->from('transaksi');
+        $this->db->join('users', 'users.id_user = transaksi.id_user');
+        $this->db->where('DATE(transaksi.tgl_transaksi) >=', $tgl_awal);
+        $this->db->where('DATE(transaksi.tgl_transaksi) <=', $tgl_akhir);
+        $this->db->order_by('transaksi.tgl_transaksi', 'DESC');
+        return $this->db->get()->result();
+    }
 }
