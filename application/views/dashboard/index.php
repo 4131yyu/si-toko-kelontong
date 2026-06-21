@@ -88,6 +88,11 @@
             <div class="card-header bg-white">
                 <i class="bi bi-trophy text-success"></i> Produk Terlaris
             </div>
+            <div class="card-body p-0">
+                <table class="table table-sm mb-0">
+                    <thead>
+                        <tr><th>Produk</th><th class="text-end">Terjual</th></tr>
+                    </thead>
 
     </div>
 
