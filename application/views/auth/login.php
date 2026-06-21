@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sistem Informasi Toko Kelontong</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap-icons.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap-icons/bootstrap-icons.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 </head>
-<body>
+<body class="d-flex align-items-center justify-content-center" style="min-height:100vh; background:#2E75B6;>
     <div class="card shadow-lg border-0" style="width:380px;">
         <div class="card-body p-5">
             <div class="text-center mb-4">
@@ -15,6 +16,10 @@
                 <h4 class="mt-2 mb-0">Toko Kelontong</h4>
                 <p class="text-muted small">Sistem Informasi Manajemen</p>
             </div>
+
+            <?php if ($this->session->flashdata('error')): ?>
+                <div class="alert alert-danger py-2><?= $this->session->flashdata('error') ?></div>
+            <?php endif; ?>
 
             <form action="<?= base_url('Auth/login') ?>" method="post">
                 <div class="mb-3">
