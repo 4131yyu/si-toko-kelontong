@@ -32,4 +32,15 @@ $(function () {
 
         return subtotal;
     }
+
+    function updateTotal() {
+        var total = 0;
+        $('#tabel-item .item-row').each(function () {
+            total += updateRow(this);
+        });
+
+        $('#total-belanja').text(formatRupiah(total));
+        updateKembalian(total);
+        return total;
+    }
 })
