@@ -78,11 +78,12 @@
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </tbody>
-
                     </table>
             </div>
-
         </div>
+    </div>
+
+    <div class="col-md-6">
 
     </div>
 
