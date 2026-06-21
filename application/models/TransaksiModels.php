@@ -54,5 +54,8 @@ class TransaksiModels extends CI_Model {
         }
         return $prefix . '0001';
     }
-
+    public function insert_transaksi($data) {
+        $this->db->insert('transaksi', $data);
+        return $this->db->insert_id();
+    }
 }
