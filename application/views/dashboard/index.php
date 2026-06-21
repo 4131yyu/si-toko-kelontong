@@ -57,6 +57,7 @@
     <div class="col-md-6"> 
         <div class="card shadow-sm">
             <div class="card-header bg-white">
+                <i class="bi bi-exclamation-triangle text-warning"></i> Stok Menipis (&le; 10)
 
             </div>
 
