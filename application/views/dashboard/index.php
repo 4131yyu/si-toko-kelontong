@@ -60,7 +60,12 @@
                 <i class="bi bi-exclamation-triangle text-warning"></i> Stok Menipis (&le; 10)
             </div>
             <div class="card-body p-0">
-
+                <table class="table table-sm mb-0">
+                    <thead>
+                        <tr><th>Produk</th><th class="text-end">Stok</th></tr>
+                    </thead>
+                    
+                    </table>
             </div>
 
         </div>
