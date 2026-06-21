@@ -33,6 +33,7 @@
                                 <p class="mb-0 small">Total Produk</p>
                                 <h3 class="mb-0"><?= $total_produk ?></h3>
                             </div>
+                            <i class="bi bi-box-seam" style="font-size:2rem;"></i>
 
                         </div>
 
