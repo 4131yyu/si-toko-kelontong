@@ -58,4 +58,7 @@ class TransaksiModels extends CI_Model {
         $this->db->insert('transaksi', $data);
         return $this->db->insert_id();
     }
+    public function insert_detail($data) {
+        return $this->db->insert_batch('detail_transaksi', $data);
+    }
 }
