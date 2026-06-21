@@ -20,3 +20,17 @@ body {
     white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100% !important;
+        min-heigth: auto !important;
+    }
+
+    main {
+        padding: 1rem !important;
+    }
+}
