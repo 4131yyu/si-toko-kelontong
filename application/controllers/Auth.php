@@ -3,7 +3,7 @@
 class Auth extends CI_Controller{
     public function __construct(){
         parent::__construct();
-        $this->load->model('Auth');
+        $this->load->model('AuthModels');
     }
     public function index(){
         if ($this->session->userdata('logged_in')){
@@ -16,7 +16,7 @@ class Auth extends CI_Controller{
         $username = $this->input->post('username');
         $password = $this->input->post('password');
 
-        $user = $this->Auth->login($username, $password);
+        $user = $this->AuthModels->login($username, $password);
 
         if ($user){
             $sess = [

@@ -5,13 +5,13 @@ class Transaksi extends CI_Controller {
     public function __construct() {
         parent::__construct();
         if (!$this->session->userdata('logged_in')) redirect('Auth');
-        $this->load->model(['Produk', 'Transaksi']);
+        $this->load->model(['ProdukModels', 'TransaksiModels']);
     }
 
     public function index() {
         $data = [
             'title'  => 'Transaksi Penjualan',
-            'produk' => $this->Produk->get_for_select(),
+            'produk' => $this->ProdukModels->get_for_select(),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -21,7 +21,7 @@ class Transaksi extends CI_Controller {
 
     public function get_harga($id_produk) {
         // dipanggil via AJAX untuk ambil harga & stok produk
-        $produk = $this->Produk->get_by_id($id_produk);
+        $produk = $this->ProdukModels->get_by_id($id_produk);
         if ($produk) {
             echo json_encode([
                 'status'     => TRUE,
@@ -48,7 +48,7 @@ class Transaksi extends CI_Controller {
         $total = 0;
         $items = [];
         foreach ($id_produk as $i => $pid) {
-            $produk = $this->Produk->get_by_id($pid);
+            $produk = $this->ProdukModels->get_by_id($pid);
             $jml    = (int) $jumlah[$i];
 
             if (!$produk || $jml <= 0) continue;
@@ -82,7 +82,7 @@ class Transaksi extends CI_Controller {
         $kembalian = $bayar - $total;
         $id_transaksi = $this->Transaksi->insert_transaksi([
             'id_user'        => $this->session->userdata('id_user'),
-            'kode_transaksi' => $this->Transaksi->generate_kode(),
+            'kode_transaksi' => $this->TransaksiModels->generate_kode(),
             'total_harga'    => $total,
             'bayar'          => $bayar,
             'kembalian'      => $kembalian,
@@ -98,9 +98,9 @@ class Transaksi extends CI_Controller {
                 'harga_satuan' => $item['harga_satuan'],
                 'subtotal'     => $item['subtotal'],
             ];
-            $this->Produk->kurangi_stok($item['id_produk'], $item['jumlah']);
+            $this->ProdukModels->kurangi_stok($item['id_produk'], $item['jumlah']);
         }
-        $this->Transaksi->insert_detail($detail_data);
+        $this->TransaksiModels->insert_detail($detail_data);
 
         redirect('Transaksi/struk/' . $id_transaksi);
     }
@@ -108,8 +108,8 @@ class Transaksi extends CI_Controller {
     public function struk($id) {
         $data = [
             'title'     => 'Struk Transaksi',
-            'transaksi' => $this->Transaksi->get_by_id($id),
-            'detail'    => $this->Transaksi->get_detail($id),
+            'transaksi' => $this->TransaksiModels->get_by_id($id),
+            'detail'    => $this->TransaksiModels->get_detail($id),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -120,7 +120,7 @@ class Transaksi extends CI_Controller {
     public function riwayat() {
         $data = [
             'title'     => 'Riwayat Transaksi',
-            'transaksi' => $this->Transaksi->get_all(),
+            'transaksi' => $this->TransaksiModels->get_all(),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);

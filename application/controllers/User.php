@@ -6,13 +6,13 @@ class User extends CI_Controller {
         parent::__construct();
         if (!$this->session->userdata('logged_in')) redirect('Auth');
         if ($this->session->userdata('role') !== 'admin') redirect('Dashboard');
-        $this->load->model('User');
+        $this->load->model('UserModels');
     }
 
     public function index() {
         $data = [
             'title' => 'Manajemen User',
-            'users' => $this->User->get_all(),
+            'users' => $this->UserModels->get_all(),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -39,12 +39,12 @@ class User extends CI_Controller {
             redirect('User/tambah');
         }
 
-        if ($this->User->is_username_exist($this->input->post('username'))) {
+        if ($this->UserModels->is_username_exist($this->input->post('username'))) {
             $this->session->set_flashdata('error', 'Username sudah digunakan!');
             redirect('User/tambah');
         }
 
-        $this->User->insert([
+        $this->UserModels->insert([
             'username'     => $this->input->post('username'),
             'password'     => $this->input->post('password'),
             'nama_lengkap' => $this->input->post('nama_lengkap'),
@@ -57,7 +57,7 @@ class User extends CI_Controller {
     public function edit($id) {
         $data = [
             'title' => 'Edit User',
-            'user'  => $this->User->get_by_id($id),
+            'user'  => $this->UserModels->get_by_id($id),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -75,12 +75,12 @@ class User extends CI_Controller {
             redirect('User/edit/' . $id);
         }
 
-        if ($this->User->is_username_exist($this->input->post('username'), $id)) {
+        if ($this->UserModels->is_username_exist($this->input->post('username'), $id)) {
             $this->session->set_flashdata('error', 'Username sudah digunakan!');
             redirect('User/edit/' . $id);
         }
 
-        $this->User->update($id, [
+        $this->UserModels->update($id, [
             'username'     => $this->input->post('username'),
             'password'     => $this->input->post('password'), // kosong = tidak diubah (handled di model)
             'nama_lengkap' => $this->input->post('nama_lengkap'),
@@ -95,7 +95,7 @@ class User extends CI_Controller {
             $this->session->set_flashdata('error', 'Tidak bisa menghapus akun sendiri!');
             redirect('User');
         }
-        $this->User->delete($id);
+        $this->UserModels->delete($id);
         $this->session->set_flashdata('success', 'User berhasil dihapus!');
         redirect('User');
     }

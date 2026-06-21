@@ -36,4 +36,32 @@ class TransaksiModels extends CI_Model {
         $this->db->where('DATE(tgl_transaksi)', date('Y-m-d'));
         return $this->db->count_all_results('transaksi');
     }
+    public function omzet_hari_ini() {
+        $this->db->select_sum('total_harga');
+        $this->db->where('DATE(tgl_transaksi)', date('Y-m-d'));
+        $row = $this->db->get('transaksi')->row();
+        return $row->total_harga ?? 0;
+    }
+    public function generate_kode() {
+        $prefix = 'TRX-' . date('Ymd') . '-';
+        $this->db->like('kode_transaksi', $prefix, 'after');
+        $this->db->order_by('id_transaksi', 'DESC');
+        $this->db->limit(1);
+        $row = $this->db->get('transaksi')->row();
+        if ($row) {
+            $last = (int) substr($row->kode_transaksi, -4);
+            return $prefix . str_pad($last + 1, 4, '0', STR_PAD_LEFT);
+        }
+        return $prefix . '0001';
+    }
+    public function insert_transaksi($data) {
+        $this->db->insert('transaksi', $data);
+        return $this->db->insert_id();
+    }
+    public function insert_detail($data) {
+        return $this->db->insert_batch('detail_transaksi', $data);
+    }
+    public function count_all() {
+        return $this->db->count_all('transaksi');
+    }
 }
