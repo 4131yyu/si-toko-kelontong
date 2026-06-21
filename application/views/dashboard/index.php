@@ -84,6 +84,10 @@
     </div>
 
     <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white">
+                <i class="bi bi-trophy text-success"></i> Produk Terlaris
+            </div>
 
     </div>
 
