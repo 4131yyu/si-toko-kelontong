@@ -42,6 +42,11 @@
                 <div class="card text-white bg-secondary shadow-sm">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="mb-0 small">Total Kategori</p>
+                                <h3 class="mb-0"><?= $total_kategori ?></h3>
+                                
+                            </div>
 
                         </div>
                     </div>
