@@ -64,7 +64,21 @@
                     <thead>
                         <tr><th>Produk</th><th class="text-end">Stok</th></tr>
                     </thead>
-                    
+                    <tbody>
+                        <?php if (empty($stok_menipis)): ?>
+                            <tr><td colspan="2" class="text-center text-muted py-3">Semua stok aman</td></tr>
+                        <?php else: ?>
+                            <?php foreach ($stok_menipis as $p): ?>
+                            <tr>
+                                <td><?= $p->nama_produk ?></td>
+                                <td class="text-end">
+                                    <span class="badge bg-danger"><?= $p->stok ?></span>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+
                     </table>
             </div>
 
