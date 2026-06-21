@@ -100,8 +100,19 @@
                             <?php foreach ($produk_terlaris as $p): ?>
                             <tr>
                                 <td><?= $p->nama_produk ?></td>
+                                <td class="text-end">
+                                    <span class="badge bg-success"><?= $p->total_terjual ?></span>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
                                 
 
-    </div>
-
-</div>
+    
