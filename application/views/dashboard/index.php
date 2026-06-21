@@ -93,6 +93,12 @@
                     <thead>
                         <tr><th>Produk</th><th class="text-end">Terjual</th></tr>
                     </thead>
+                    <tbody>
+                        <?php if (empty($produk_terlaris)): ?>
+                            <tr><td colspan="2" class="text-center text-muted py-3">Belum ada data transaksi</td></tr>
+                        <?php else: ?>
+                            <?php foreach ($produk_terlaris as $p): ?>
+                            <tr>
 
     </div>
 
