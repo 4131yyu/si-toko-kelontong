@@ -43,4 +43,30 @@ $(function () {
         updateKembalian(total);
         return total;
     }
+
+    function updateKembalian(total) {
+        var bayar = parseFloat($('#input-bayar').val()) || 0;
+        var kembalian = bayar - total;
+        $('#kembalian').text(formatRupiah(kembalian > 0 ? kembalian : 0));
+        $('#kembalian').toggleClass('text-danger', kembalian < 0);
+    }
+
+    function bindRow($row) {
+        $row.find('.select-produk').on('change', function () {
+            updateTotal();
+        });
+
+        $row.find('.input-jumlah').on('input', function () {
+            updateTotal();
+        });
+
+        $row.find('.btn-hapus-row').on('click', function () {
+            if ($('.item-row').length > 1) {
+                $row.remove();
+                updateTotal();
+            } else {
+                alert('Minimal harus ada 1 item transaksi!');
+            }
+        });
+    }
 })
