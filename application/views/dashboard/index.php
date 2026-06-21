@@ -48,13 +48,12 @@
 
                             </div>
                             <i class="bi bi-tags" style="font-size:2rem;"></i>
-
                         </div>
                     </div>
-
                 </div>
-
             </div>
+        </div>
+        <div class="row g-3">
 
         </div>
     </div>
