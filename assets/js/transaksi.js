@@ -85,4 +85,27 @@ $(function () {
         $('#tabel-item tbody').append($newRow);
         bindRow($newRow);
     });
+
+    $('#input-bayar').on('input', function () {
+        var total = parseRupiah($('#total-belanja').text());
+        updateKembalian(total);
+    });
+
+    $('#form-transaksi').on('submit', function (e) {
+        var total = parseRupiah($('#total-belanja').text());
+        var bayar = parseFloat($('#input-bayar').val()) || 0;
+
+        if (total <= 0) {
+            alert('Total belanja tidak boleh nol! Pilih produk terlebih dahulu.');
+            e.preventDefault();
+            return false;
+        }
+        if (bayar < total) {
+            alert('Nominal bayar kurang dari total belanja!');
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    updateTotal();
 })
