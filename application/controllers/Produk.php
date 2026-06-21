@@ -43,7 +43,7 @@ class Produk extends CI_Controller {
             $this->session->set_flashdata('error', validation_errors());
             redirect('Produk/tambah');
         }
-        $this->Produk->insert([
+        $this->ProdukModels->insert([
             'id_kategori'  => $this->input->post('id_kategori'),
             'nama_produk'  => $this->input->post('nama_produk'),
             'stok'         => $this->input->post('stok'),
