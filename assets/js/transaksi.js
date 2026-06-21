@@ -69,4 +69,20 @@ $(function () {
             }
         });
     }
+
+    $('.item-row').each(function () {
+        bindRow($(this));
+    });
+
+    $('#btn-tambah-row').on('click', function () {
+        var $newRow = $('.item-row:first').clone();
+        $newRow.find('.select-produk').val('');
+        $newRow.find('.input-jumlah').val(1);
+        $newRow.find('.stok-cell').text('-');
+        $newRow.find('.harga-cell').text('Rp 0');
+        $newRow.find('.subtotal-cell').text('Rp 0');
+
+        $('#tabel-item tbody').append($newRow);
+        bindRow($newRow);
+    });
 })
