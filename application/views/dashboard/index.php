@@ -45,8 +45,9 @@
                             <div>
                                 <p class="mb-0 small">Total Kategori</p>
                                 <h3 class="mb-0"><?= $total_kategori ?></h3>
-                                
+
                             </div>
+                            <i class="bi bi-tags" style="font-size:2rem;"></i>
 
                         </div>
                     </div>
