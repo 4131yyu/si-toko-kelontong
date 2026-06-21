@@ -6,7 +6,7 @@ class Laporan extends CI_Controller {
         parent::__construct();
         if (!$this->session->userdata('logged_in')) redirect('Auth');
         if ($this->session->userdata('role') !== 'admin') redirect('Dashboard');
-        $this->load->model('Transaksi');
+        $this->load->model('TransaksiModels');
     }
 
     public function index() {
@@ -17,7 +17,7 @@ class Laporan extends CI_Controller {
             'title'     => 'Laporan Penjualan',
             'tgl_awal'  => $tgl_awal,
             'tgl_akhir' => $tgl_akhir,
-            'transaksi' => $this->Transaksi->get_by_tanggal($tgl_awal, $tgl_akhir),
+            'transaksi' => $this->TransaksiModels->get_by_tanggal($tgl_awal, $tgl_akhir),
         ];
 
         $total = 0;
@@ -36,7 +36,7 @@ class Laporan extends CI_Controller {
         $tgl_awal  = $this->input->get('tgl_awal') ?: date('Y-m-01');
         $tgl_akhir = $this->input->get('tgl_akhir') ?: date('Y-m-d');
 
-        $transaksi = $this->Transaksi->get_by_tanggal($tgl_awal, $tgl_akhir);
+        $transaksi = $this->TransaksiModels->get_by_tanggal($tgl_awal, $tgl_akhir);
         $total = 0;
         foreach ($transaksi as $t) $total += $t->total_harga;
 
