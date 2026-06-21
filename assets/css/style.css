@@ -1,0 +1,22 @@
+body {
+    background: #f4f6f9
+}
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(15,23,42,0.12);
+}
+
+.sidebar .nav.link {
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+.card {
+    border: 0;
+    border-radius: 8px;
+}
+
+.table th {
+    white-space: nowrap;
+}
+
