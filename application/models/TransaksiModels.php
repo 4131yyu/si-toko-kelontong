@@ -16,4 +16,11 @@ class TransaksiModels extends CI_Model {
         $this->db->where('transaksi.id_transaksi', $id);
         return $this->db->get()->row();
     }
+    public function get_detail($id_transaksi) {
+        $this->db->select('detail_transaksi.*, produk.nama_produk');
+        $this->db->from('detail_transaksi');
+        $this->db->join('produk', 'produk.id_produk = detail_transaksi.id_produk');
+        $this->db->where('detail_transaksi.id_transaksi', $id_transaksi);
+        return $this->db->get()->result();
+    }
 }
