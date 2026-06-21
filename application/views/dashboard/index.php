@@ -99,6 +99,8 @@
                         <?php else: ?>
                             <?php foreach ($produk_terlaris as $p): ?>
                             <tr>
+                                <td><?= $p->nama_produk ?></td>
+                                
 
     </div>
 
