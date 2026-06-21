@@ -31,6 +31,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <p class="mb-0 small">Total Produk</p>
+                                <h3 class="mb-0"><?= $total_produk ?></h3>
                             </div>
 
                         </div>
