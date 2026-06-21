@@ -20,6 +20,7 @@
                                 <p class="mb-0 small">Omzet Hari Ini</p>
                                 <h5 class="mb-0">Rp <?= number_format($omzet_hari_ini, 0, ',', '.') ?></h5>
                             </div>
+                            <i class="bi bi-cash-coin" style="font-size:2rem;"></i>
 
                         </div>
 
