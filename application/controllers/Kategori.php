@@ -6,12 +6,12 @@ class Kategori extends CI_Controller {
         parent::__construct();
         if (!$this->session->userdata('logged_in')) redirect('Auth');
         if (!$this->session->userdata('role') !== 'admin') redirect('Dashbord');
-        $this->load->,model('Kategori');
+        $this->load->,model('KategoriModels');
     }
     public function index(){
         $data = [
             'title'     => 'Manajemen Kategori',
-            'kategori'  => $this->Kategori->get_all(),
+            'kategori'  => $this->KategoriModels->get_all(),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -31,7 +31,7 @@ class Kategori extends CI_Controller {
             $this->session->set_flashdata('error', validation_errors());
             redirect('Kategori/tambah');
         }
-        $this->Kategori->insert([
+        $this->KategoriModels->insert([
             'nama_kategori' => $this->input->post('nama_kategori'),
             'deskripsi'     => $this->input->post('deskripsi'),
         ]);
@@ -42,7 +42,7 @@ class Kategori extends CI_Controller {
     public function edit($id) {
         $data = [
             'title'    => 'Edit Kategori',
-            'kategori' => $this->Kategori->get_by_id($id),
+            'kategori' => $this->KategoriModels->get_by_id($id),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -56,7 +56,7 @@ class Kategori extends CI_Controller {
             $this->session->set_flashdata('error', validation_errors());
             redirect('Kategori/edit/' . $id);
         }
-        $this->Kategori->update($id, [
+        $this->KategoriModels->update($id, [
             'nama_kategori' => $this->input->post('nama_kategori'),
             'deskripsi'     => $this->input->post('deskripsi'),
         ]);
@@ -65,7 +65,7 @@ class Kategori extends CI_Controller {
     }
 
     public function hapus($id) {
-        $this->Kategori->delete($id);
+        $this->KategoriModels->delete($id);
         $this->session->set_flashdata('success', 'Kategori berhasil dihapus!');
         redirect('Kategori');
     }
