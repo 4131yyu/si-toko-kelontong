@@ -42,5 +42,17 @@ class TransaksiModels extends CI_Model {
         $row = $this->db->get('transaksi')->row();
         return $row->total_harga ?? 0;
     }
-    
+    public function generate_kode() {
+        $prefix = 'TRX-' . date('Ymd') . '-';
+        $this->db->like('kode_transaksi', $prefix, 'after');
+        $this->db->order_by('id_transaksi', 'DESC');
+        $this->db->limit(1);
+        $row = $this->db->get('transaksi')->row();
+        if ($row) {
+            $last = (int) substr($row->kode_transaksi, -4);
+            return $prefix . str_pad($last + 1, 4, '0', STR_PAD_LEFT);
+        }
+        return $prefix . '0001';
+    }
+
 }
