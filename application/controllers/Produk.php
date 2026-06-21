@@ -6,13 +6,13 @@ class Produk extends CI_Controller {
         parent::__construct();
         if (!$this->session->userdata('logged_in')) redirect('Auth');
         if ($this->session->userdata('role') !== 'admin') redirect('Dashboard');
-        $this->load->model(['Produk', 'Kategori']);
+        $this->load->model(['ProdukModels', 'KategoriModels']);
     }
 
     public function index() {
         $data = [
             'title'   => 'Manajemen Produk',
-            'produk'  => $this->Produk->get_all(),
+            'produk'  => $this->ProdukModels->get_all(),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -23,7 +23,7 @@ class Produk extends CI_Controller {
     public function tambah() {
         $data = [
             'title'    => 'Tambah Produk',
-            'kategori' => $this->Kategori->get_all(),
+            'kategori' => $this->KategoriModels->get_all(),
             'produk'   => null,
         ];
         $this->load->view('templates/header', $data);
@@ -57,8 +57,8 @@ class Produk extends CI_Controller {
     public function edit($id) {
         $data = [
             'title'    => 'Edit Produk',
-            'produk'   => $this->Produk->get_by_id($id),
-            'kategori' => $this->Kategori->get_all(),
+            'produk'   => $this->ProdukModels->get_by_id($id),
+            'kategori' => $this->KategoriModels->get_all(),
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -77,7 +77,7 @@ class Produk extends CI_Controller {
             $this->session->set_flashdata('error', validation_errors());
             redirect('Produk/edit/' . $id);
         }
-        $this->Produk->update($id, [
+        $this->ProdukModels->update($id, [
             'id_kategori' => $this->input->post('id_kategori'),
             'nama_produk' => $this->input->post('nama_produk'),
             'stok'        => $this->input->post('stok'),
@@ -89,7 +89,7 @@ class Produk extends CI_Controller {
     }
 
     public function hapus($id) {
-        $this->Produk->delete($id);
+        $this->ProdukModels->delete($id);
         $this->session->set_flashdata('success', 'Produk berhasil dihapus!');
         redirect('Produk');
     }
