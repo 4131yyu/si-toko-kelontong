@@ -21,13 +21,11 @@
                                 <h5 class="mb-0">Rp <?= number_format($omzet_hari_ini, 0, ',', '.') ?></h5>
                             </div>
                             <i class="bi bi-cash-coin" style="font-size:2rem;"></i>
-
                         </div>
-
-
                     </div>
-
                 </div>
+            </div>
+            <div class="col-md-3">
 
             </div>
 
