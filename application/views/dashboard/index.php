@@ -34,10 +34,12 @@
                                 <h3 class="mb-0"><?= $total_produk ?></h3>
                             </div>
                             <i class="bi bi-box-seam" style="font-size:2rem;"></i>
-
                         </div>
-
                     </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-secondary shadow-sm">
 
                 </div>
 
