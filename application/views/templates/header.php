@@ -19,5 +19,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item d-flex align-items-center text-white me-3">
+                    <i class="bi bi-person-circle me-1"></i>
+                    <?= $this->session->userdata('nama_lengkap') ?>
+                    <span class="badge bg-light text-dark ms-2"><?= ucfirst($this->session->userdata('role')) ?></span>
+                </li>
         </div>
     </div>  
