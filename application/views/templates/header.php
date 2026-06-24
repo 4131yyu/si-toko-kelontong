@@ -25,5 +25,14 @@
                     <?= $this->session->userdata('nama_lengkap') ?>
                     <span class="badge bg-light text-dark ms-2"><?= ucfirst($this->session->userdata('role')) ?></span>
                 </li>
+       <li class="nav-item">
+                    <a class="btn btn-outline-light btn-sm" href="<?= base_url('Auth/logout') ?>"
+                       onclick="return confirm('Anda yakin ingin keluar?')">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </li>
+            </ul>
         </div>
-    </div>  
+    </div>
+</nav>
+</div>  
