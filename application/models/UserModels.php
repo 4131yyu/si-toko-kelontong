@@ -8,4 +8,8 @@ class UserModels extends CI_Model {
     public function get_by_id($id) {
         return $this->db->get_where('users', ['id_user' => $id])->row();
     }
+     public function insert($data) {
+        $data['password'] = md5($data['password']);
+        return $this->db->insert('users', $data);
+    }
 }
