@@ -7,3 +7,5 @@ if (!function_exists('sidebar_active')) {
     function sidebar_active($controller, $method = null)
     {
         $CI =& get_instance();
+        $current_controller = strtolower($CI->uri->segment(1) ?: 'dashboard');
+        $current_method = strtolower($CI->uri->segment(2) ?: 'index');
