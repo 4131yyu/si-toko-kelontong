@@ -15,6 +15,11 @@ class UserModels extends CI_Model {
      public function update($id, $data) {
         if (!empty($data['password'])) {
             $data['password'] = md5($data['password']);
+        } else {
+            unset($data['password']);
         }
+        $this->db->where('id_user', $id);
+        return $this->db->update('users', $data);
+    
     }
 }
