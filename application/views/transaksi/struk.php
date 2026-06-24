@@ -53,6 +53,15 @@
                         </tr>
                     </tfoot>
                 </table>
+
+                <div class="text-center mt-3">
+                    <a href="<?= base_url('Transaksi') ?>" class="btn btn-primary">
+                        <i class="bi bi-cart-plus"></i> Transaksi Baru
+                    </a>
+                    <button onclick="window.print()" class="btn btn-outline-secondary">
+                        <i class="bi bi-printer"></i> Cetak
+                    </button>
+                </div>
             </div>
         </div>
     </div>
