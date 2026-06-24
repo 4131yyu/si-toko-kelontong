@@ -10,3 +10,8 @@ if (!function_exists('sidebar_active')) {
         $current_controller = strtolower($CI->uri->segment(1) ?: 'dashboard');
         $current_method = strtolower($CI->uri->segment(2) ?: 'index');
         $controller = strtolower($controller);
+        $method = $method !== null ? strtolower($method) : null;
+
+        if ($method !== null) {
+            return $current_controller === $controller && $current_method === $method ? 'active' : '';
+        }
