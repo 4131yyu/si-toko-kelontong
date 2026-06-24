@@ -43,7 +43,10 @@
                     </tr>
                 </tbody>
             </table>
-            
+
+            <button type="button" class="btn btn-outline-primary btn-sm mb-3" id="btn-tambah-row">
+                <i class="bi bi-plus-lg"></i> Tambah Item
+            </button>
 
             <div class="row justify-content-end">
                 <div class="col-md-4">
@@ -65,6 +68,9 @@
                     </table>
                 </div>
             </div>
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-check-circle"></i> Proses Transaksi
+            </button>
         </form>
     </div>
 </div>
