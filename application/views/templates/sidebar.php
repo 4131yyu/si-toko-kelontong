@@ -15,3 +15,7 @@ if (!function_exists('sidebar_active')) {
         if ($method !== null) {
             return $current_controller === $controller && $current_method === $method ? 'active' : '';
         }
+        return $current_controller === $controller ? 'active' : '';
+    }
+}
+?>
