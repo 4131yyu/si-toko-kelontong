@@ -43,6 +43,28 @@
                     </tr>
                 </tbody>
             </table>
+            
+
+            <div class="row justify-content-end">
+                <div class="col-md-4">
+                    <table class="table">
+                        <tr>
+                            <th>Total Belanja</th>
+                            <td class="text-end" id="total-belanja">Rp 0</td>
+                        </tr>
+                        <tr>
+                            <th>Bayar</th>
+                            <td>
+                                <input type="number" name="bayar" id="input-bayar" class="form-control text-end" min="0" step="0.01" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Kembalian</th>
+                            <td class="text-end" id="kembalian">Rp 0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </form>
     </div>
 </div>
