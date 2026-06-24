@@ -31,4 +31,7 @@ class UserModels extends CI_Model {
         if ($exclude_id) $this->db->where('id_user !=', $exclude_id);
         return $this->db->count_all_results('users') > 0;
     }
+     public function count_all() {
+        return $this->db->count_all('users');
+    }
 }
