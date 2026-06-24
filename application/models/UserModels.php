@@ -12,4 +12,6 @@ class UserModels extends CI_Model {
         $data['password'] = md5($data['password']);
         return $this->db->insert('users', $data);
     }
+     public function update($id, $data) {
+    }
 }
