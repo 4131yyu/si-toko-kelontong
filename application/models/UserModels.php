@@ -26,4 +26,9 @@ class UserModels extends CI_Model {
         $this->db->where('id_user', $id);
         return $this->db->delete('users');
     }
+    public function is_username_exist($username, $exclude_id = null) {
+        $this->db->where('username', $username);
+        if ($exclude_id) $this->db->where('id_user !=', $exclude_id);
+        return $this->db->count_all_results('users') > 0;
+    }
 }
