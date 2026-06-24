@@ -19,6 +19,40 @@
                         <td>: <?= $transaksi->nama_lengkap ?></td>
                     </tr>
                 </table>
+                <table class="table table-bordered align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Produk</th>
+                            <th class="text-end">Jumlah</th>
+                            <th class="text-end">Harga</th>
+                            <th class="text-end">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($detail as $d): ?>
+                        <tr>
+                            <td><?= $d->nama_produk ?></td>
+                            <td class="text-end"><?= $d->jumlah ?></td>
+                            <td class="text-end">Rp <?= number_format($d->harga_satuan, 0, ',', '.') ?></td>
+                            <td class="text-end">Rp <?= number_format($d->subtotal, 0, ',', '.') ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" class="text-end">Total</th>
+                            <th class="text-end">Rp <?= number_format($transaksi->total_harga, 0, ',', '.') ?></th>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="text-end">Bayar</th>
+                            <th class="text-end">Rp <?= number_format($transaksi->bayar, 0, ',', '.') ?></th>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="text-end">Kembalian</th>
+                            <th class="text-end">Rp <?= number_format($transaksi->kembalian, 0, ',', '.') ?></th>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </div>
     </div>
