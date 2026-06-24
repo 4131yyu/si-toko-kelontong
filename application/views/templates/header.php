@@ -12,3 +12,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
+        <a class="navbar-brand" href="<?= base_url('Dashboard') ?>">
+            <i class="bi bi-shop"></i> Toko Kelontong
+        </a>
+    </div>  
