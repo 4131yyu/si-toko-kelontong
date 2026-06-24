@@ -6,7 +6,7 @@ class Kategori extends CI_Controller {
         parent::__construct();
         if (!$this->session->userdata('logged_in')) redirect('Auth');
         if (!$this->session->userdata('role') !== 'admin') redirect('Dashbord');
-        $this->load->,model('KategoriModels');
+        $this->load->model('KategoriModels');
     }
     public function index(){
         $data = [
