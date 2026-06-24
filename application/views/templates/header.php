@@ -15,4 +15,7 @@
         <a class="navbar-brand" href="<?= base_url('Dashboard') ?>">
             <i class="bi bi-shop"></i> Toko Kelontong
         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </div>  
