@@ -9,3 +9,4 @@ if (!function_exists('sidebar_active')) {
         $CI =& get_instance();
         $current_controller = strtolower($CI->uri->segment(1) ?: 'dashboard');
         $current_method = strtolower($CI->uri->segment(2) ?: 'index');
+        $controller = strtolower($controller);
