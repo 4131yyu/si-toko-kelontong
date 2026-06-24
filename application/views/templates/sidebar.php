@@ -6,3 +6,4 @@ $current_method = strtolower($this->uri->segment(2) ?: 'index');
 if (!function_exists('sidebar_active')) {
     function sidebar_active($controller, $method = null)
     {
+        $CI =& get_instance();
