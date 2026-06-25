@@ -90,3 +90,19 @@ index.php
    ```text
    toko_kelontong
    ```
+
+   5. Sesuaikan konfigurasi database di:
+
+   ```text
+   application/config/database.php
+   ```
+
+   Contoh konfigurasi lokal XAMPP:
+
+   ```php
+   'hostname' => 'localhost',
+   'username' => 'root',
+   'password' => '',
+   'database' => 'toko_kelontong',
+   'dbdriver' => 'mysqli',
+   ```
