@@ -31,7 +31,7 @@ $(function () {
             jumlah = 1;
             $jumlahInput.val(1);
         }
-        
+
         if (stok > 0 && jumlah > stok) {
             jumlah = stok;
             $jumlahInput.val(stok);
@@ -60,8 +60,9 @@ $(function () {
     function updateKembalian(total) {
         var bayar = parseFloat($('#input-bayar').val()) || 0;
         var kembalian = bayar - total;
-        $('#kembalian').text(formatRupiah(kembalian > 0 ? kembalian : 0));
-        $('#kembalian').toggleClass('text-danger', kembalian < 0);
+        $('#kembalian')
+            .text(formatRupiah(kembalian > 0 ? kembalian : 0))
+            .toggleClass('text-danger', kembalian < 0);
     }
 
     function bindRow($row) {
@@ -80,26 +81,45 @@ $(function () {
             } else {
                 alert('Minimal harus ada 1 item transaksi!');
             }
-            resetRow(row);
+            resetRow($row);
             updateTotal();
         });
+    }
+
+    function addRow() {
+
+        var $newRow = $('.item-row:first').clone();
+        resetRow($newRow);
+        $('#tabel-item tbody').append($newRow);
+        bindRow($newRow);
+        updateTotal();
+    }
+
+    function resetTransaksi() {
+
+        if (!confirm('Reset semua pilihan transaksi?')) {
+            return;
+        }
+
+        $('.item-row').each(function (index) {
+            if (index === 0) {
+                resetRow($(this));
+                return;
+            }
+            $(this).remove();
+        });
+
+        $('#input-bayar').val('');
+        updateTotal();
     }
 
     $('.item-row').each(function () {
         bindRow($(this));
     });
 
-    $('#btn-tambah-row').on('click', function () {
-        var $newRow = $('.item-row:first').clone();
-        $newRow.find('.select-produk').val('');
-        $newRow.find('.input-jumlah').val(1);
-        $newRow.find('.stok-cell').text('-');
-        $newRow.find('.harga-cell').text('Rp 0');
-        $newRow.find('.subtotal-cell').text('Rp 0');
+    $('#btn-tambah-row').on('click', addRow);
 
-        $('#tabel-item tbody').append($newRow);
-        bindRow($newRow);
-    });
+    $('#btn-reset-row').on('click', resetTransaksi);
 
     $('#input-bayar').on('input', function () {
         var total = parseRupiah($('#total-belanja').text());
@@ -120,6 +140,7 @@ $(function () {
             e.preventDefault();
             return false;
         }
+        return true
     });
 
     updateTotal();
