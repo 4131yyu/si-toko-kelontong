@@ -28,6 +28,11 @@ if (!function_exists('sidebar_active')) {
                 </a>
             </li>
             <?php if ($role === 'admin'): ?>
+            <li>
+                <a href="<?= base_url('Kategori') ?>" class="nav-link text-white <?= sidebar_active('Kategori') ?>">
+                    <i class="bi bi-tags me-2"></i> Kategori
+                </a>
+            </li>
 
 
         </ul>
