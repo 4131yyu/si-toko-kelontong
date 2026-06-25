@@ -189,3 +189,34 @@ Saat transaksi diproses, sistem melakukan beberapa proses:
 - Data transaksi muncul di riwayat dan laporan.
 
 Jika transaksi hanya disusun di halaman kasir tetapi belum klik `Proses Transaksi`, data belum tersimpan ke database.
+
+## Tabel Database
+
+Project ini menggunakan tabel utama berikut:
+
+```text
+users
+kategori
+produk
+transaksi
+detail_transaksi
+```
+
+Kolom penting:
+
+```text
+users:
+id_user, username, password, nama_lengkap, role, created_at
+
+kategori:
+id_kategori, nama_kategori, deskripsi
+
+produk:
+id_produk, id_kategori, nama_produk, stok, harga_beli, harga_jual
+
+transaksi:
+id_transaksi, id_user, kode_transaksi, total_harga, bayar, kembalian, tgl_transaksi
+
+detail_transaksi:
+id_detail, id_transaksi, id_produk, jumlah, harga_satuan, subtotal
+```
