@@ -61,9 +61,7 @@ if (!function_exists('sidebar_active')) {
                 </a>
             </li>
             <?php endif; ?>   
-
-
         </ul>
-
     </div>
     </nav>
+    <main class="flex-fill p-4" style="background:#f4f6f9; min-height:calc(100vh - 56px);">
