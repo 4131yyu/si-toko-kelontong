@@ -33,6 +33,11 @@ if (!function_exists('sidebar_active')) {
                     <i class="bi bi-tags me-2"></i> Kategori
                 </a>
             </li>
+            <li>
+                <a href="<?= base_url('Produk') ?>" class="nav-link text-white <?= sidebar_active('Produk') ?>">
+                    <i class="bi bi-box-seam me-2"></i> Produk
+                </a>
+            </li>
 
 
         </ul>
