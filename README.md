@@ -106,3 +106,17 @@ index.php
    'database' => 'toko_kelontong',
    'dbdriver' => 'mysqli',
    ```
+
+   6. Sesuaikan base URL di:
+
+   ```text
+   application/config/config.php
+   ```
+
+   Contoh:
+
+   ```php
+   $config['base_url'] = 'http://localhost/nama-project/';
+   $config['index_page'] = '';
+   $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
+   ```
