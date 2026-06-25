@@ -13,3 +13,4 @@ Aplikasi kasir dan manajemen toko berbasis CodeIgniter 3. Aplikasi ini digunakan
 - Pengurangan stok otomatis setelah transaksi berhasil.
 - Riwayat transaksi.
 - Dashboard ringkasan transaksi, omzet, produk, kategori, stok menipis, dan produk terlaris.
+- Laporan penjualan berdasarkan rentang tanggal.
