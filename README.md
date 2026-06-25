@@ -177,3 +177,15 @@ Password: kasir123
 7. Klik `Proses Transaksi`.
 8. Sistem akan menyimpan transaksi, menyimpan detail transaksi, menghitung kembalian, dan mengurangi stok produk.
 9. Struk transaksi akan ditampilkan setelah transaksi berhasil.
+
+## Alur Data Transaksi
+
+Saat transaksi diproses, sistem melakukan beberapa proses:
+
+- Menyimpan data utama ke tabel `transaksi`.
+- Menyimpan item belanja ke tabel `detail_transaksi`.
+- Mengurangi stok produk di tabel `produk`.
+- Menampilkan struk transaksi.
+- Data transaksi muncul di riwayat dan laporan.
+
+Jika transaksi hanya disusun di halaman kasir tetapi belum klik `Proses Transaksi`, data belum tersimpan ke database.
