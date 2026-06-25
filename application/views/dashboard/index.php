@@ -100,7 +100,7 @@
                             <?php foreach ($produk_terlaris as $p): ?>
                             <tr>
                                 <td><?= $p->nama_produk ?></td>
-                                <td class="text-end">
+                                <td class="text-end pe-3">
                                     <span class="badge bg-success"><?= $p->total_terjual ?></span>
                                 </td>
                             </tr>
