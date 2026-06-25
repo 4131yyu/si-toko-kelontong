@@ -11,3 +11,4 @@ Aplikasi kasir dan manajemen toko berbasis CodeIgniter 3. Aplikasi ini digunakan
 - Manajemen produk, stok, harga beli, dan harga jual.
 - Transaksi kasir dengan perhitungan total belanja dan kembalian.
 - Pengurangan stok otomatis setelah transaksi berhasil.
+- Riwayat transaksi.
