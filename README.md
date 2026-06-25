@@ -152,3 +152,16 @@ Kasir
 Username: kasir1
 Password: kasir123
 ```
+
+## Alur Penggunaan
+
+### Admin
+
+1. Login menggunakan akun admin.
+2. Buka dashboard untuk melihat ringkasan toko.
+3. Kelola kategori produk di menu `Kategori`.
+4. Kelola produk di menu `Produk`.
+5. Kelola user admin/kasir di menu `Manajemen User`.
+6. Lihat riwayat transaksi di menu `Riwayat Transaksi`.
+7. Buka `Laporan` untuk melihat penjualan berdasarkan tanggal.
+8. Klik export PDF untuk mencetak laporan penjualan.
