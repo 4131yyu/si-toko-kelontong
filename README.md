@@ -263,3 +263,13 @@ vendor/tecnickcom/tcpdf/
 ```
 
 ## Asset Frontend
+
+Asset lokal yang digunakan:
+
+```text
+assets/css/bootstrap.min.css
+assets/css/style.css
+assets/js/bootstrap.bundle.min.js
+assets/js/jquery-3.7.1.min.js
+assets/js/transaksi.js
+```
