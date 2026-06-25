@@ -27,6 +27,7 @@ if (!function_exists('sidebar_active')) {
                     <i class="bi bi-speedometer2 me-2"></i> Dashboard
                 </a>
             </li>
+            <?php if ($role === 'admin'): ?>
 
 
         </ul>
