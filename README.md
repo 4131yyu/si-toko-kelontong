@@ -134,3 +134,9 @@ index.php
    ```apache
    RewriteBase /
    ```
+
+   8. Jalankan Apache dan MySQL, lalu buka aplikasi melalui browser.
+
+   ```text
+   http://localhost/nama-project/
+   ```
