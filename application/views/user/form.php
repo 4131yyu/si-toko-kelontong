@@ -10,3 +10,8 @@
                 <input type="text" name="username" class="form-control"
                        value="<?= $is_edit ? $user->username : '' ?>" required>
             </div>
+            <div class="mb-3">
+                <label class="form-label">Nama lengkap</label>
+                <input type="text" name="nama_lengkap" class="form-control"
+                value="<?= $is_edit ? $user->nama_lengkap : ''?>" required>
+</div>
