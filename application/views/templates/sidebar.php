@@ -49,6 +49,7 @@ if (!function_exists('sidebar_active')) {
                     <i class="bi bi-clock-history me-2"></i> Riwayat Transaksi
                 </a>
             </li>
+            <?php if ($role === 'admin'): ?>
 
 
         </ul>
