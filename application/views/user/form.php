@@ -28,3 +28,10 @@
                     <option value="admin" <?= ($is_edit && $user->role === 'admin') ? 'selected' : '' ?>>Admin</option>
                 </select>
             </div>
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-save"></i> Simpan
+            </button>
+            <a href="<?= base_url('User') ?>" class="btn btn-secondary">Batal</a>
+        </form>
+    </div>
+</div>
