@@ -140,3 +140,15 @@ index.php
    ```text
    http://localhost/nama-project/
    ```
+
+   ## Akun Default
+
+```text
+Admin
+Username: admin
+Password: admin123
+
+Kasir
+Username: kasir1
+Password: kasir123
+```
