@@ -239,3 +239,5 @@ dibatalkan
 ```
 
 Dengan pendekatan ini, transaksi tidak langsung dihapus. Jika transaksi dibatalkan, sistem bisa mengembalikan stok produk dan laporan bisa mengabaikan transaksi batal.
+
+## Export PDF
