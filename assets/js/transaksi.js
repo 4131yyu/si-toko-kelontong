@@ -8,6 +8,15 @@ $(function () {
         return Number(String(text || '0').replace(/[^0-9]/g, '')) || 0;
     }
 
+    function resetRow($row) {
+        $row.find('.select-produk').val('');
+        $row.find('.input-jumlah').val(1);
+
+        $row.find('.stok-cell').text('-');
+        $row.find('.harga-cell').text(formatRupiah(0));
+        $row.find('.subtotal-cell').text(formatRupiah(0));
+    }
+
     function updateRow(row) {
         var $row = $(row);
         var $select = $row.find('.select-produk');
@@ -16,9 +25,13 @@ $(function () {
         var harga = Number($option.data('harga')) || 0;
         var stok = Number($option.data('stok')) || 0;
         var $jumlahInput = $row.find('.input-jumlah');
-        var jumlah = parseInt($jumlahInput.val()) || 0;
+        var jumlah = parseInt($jumlahInput.val(), 10) || 1;
 
-        // Validasi: jumlah tidak boleh melebihi stok yang tersedia
+        if (jumlah < 1) {
+            jumlah = 1;
+            $jumlahInput.val(1);
+        }
+        
         if (stok > 0 && jumlah > stok) {
             jumlah = stok;
             $jumlahInput.val(stok);
@@ -67,6 +80,8 @@ $(function () {
             } else {
                 alert('Minimal harus ada 1 item transaksi!');
             }
+            resetRow(row);
+            updateTotal();
         });
     }
 
