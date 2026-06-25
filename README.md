@@ -70,3 +70,11 @@ index.php
    ```bash
    cd C:\xampp\htdocs\nama-project
    ```
+
+   3. Install dependency Composer.
+
+   ```bash
+   composer install
+   ```
+
+   
