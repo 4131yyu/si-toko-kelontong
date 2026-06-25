@@ -220,3 +220,22 @@ id_transaksi, id_user, kode_transaksi, total_harga, bayar, kembalian, tgl_transa
 detail_transaksi:
 id_detail, id_transaksi, id_produk, jumlah, harga_satuan, subtotal
 ```
+
+## Catatan Penghapusan Transaksi
+
+Jika data transaksi dihapus langsung dari database:
+
+- Riwayat transaksi akan hilang.
+- Laporan penjualan berubah.
+- Dashboard omzet dan transaksi ikut berubah.
+- Detail transaksi bisa ikut terhapus jika relasi memakai `ON DELETE CASCADE`.
+- Stok produk tidak otomatis kembali.
+
+Untuk menjaga akurasi data, lebih aman menggunakan kolom status seperti:
+
+```text
+selesai
+dibatalkan
+```
+
+Dengan pendekatan ini, transaksi tidak langsung dihapus. Jika transaksi dibatalkan, sistem bisa mengembalikan stok produk dan laporan bisa mengabaikan transaksi batal.
