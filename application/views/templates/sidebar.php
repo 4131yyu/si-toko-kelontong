@@ -59,7 +59,8 @@ if (!function_exists('sidebar_active')) {
                 <a href="<?= base_url('User') ?>" class="nav-link text-white <?= sidebar_active('User') ?>">
                     <i class="bi bi-people me-2"></i> Manajemen User
                 </a>
-            </li>   
+            </li>
+            <?php endif; ?>   
 
 
         </ul>
