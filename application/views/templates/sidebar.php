@@ -38,6 +38,7 @@ if (!function_exists('sidebar_active')) {
                     <i class="bi bi-box-seam me-2"></i> Produk
                 </a>
             </li>
+            <?php endif; ?>
 
 
         </ul>
