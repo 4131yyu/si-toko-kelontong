@@ -165,3 +165,15 @@ Password: kasir123
 6. Lihat riwayat transaksi di menu `Riwayat Transaksi`.
 7. Buka `Laporan` untuk melihat penjualan berdasarkan tanggal.
 8. Klik export PDF untuk mencetak laporan penjualan.
+
+### Kasir
+
+1. Login menggunakan akun kasir.
+2. Buka menu `Transaksi`.
+3. Pilih produk.
+4. Masukkan jumlah item.
+5. Tambahkan item lain jika diperlukan.
+6. Masukkan nominal bayar.
+7. Klik `Proses Transaksi`.
+8. Sistem akan menyimpan transaksi, menyimpan detail transaksi, menghitung kembalian, dan mengurangi stok produk.
+9. Struk transaksi akan ditampilkan setelah transaksi berhasil.
