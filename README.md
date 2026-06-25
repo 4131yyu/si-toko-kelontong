@@ -46,3 +46,11 @@ composer.lock
 index.php
 .htaccess
 ```
+
+## Kebutuhan Sistem
+
+- PHP 7.4 atau lebih baru.
+- MySQL/MariaDB.
+- Apache dengan `mod_rewrite` aktif.
+- Composer.
+- XAMPP direkomendasikan untuk penggunaan lokal.
