@@ -117,6 +117,16 @@ class Transaksi extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
+    public function cetak($id) {
+    $data = [
+        'title'     => 'Cetak Struk',
+        'transaksi' => $this->TransaksiModels->get_by_id($id),
+        'detail'    => $this->TransaksiModels->get_detail($id),
+    ];
+
+    $this->load->view('transaksi/struk_print', $data);
+    }
+
     public function riwayat() {
         $data = [
             'title'     => 'Riwayat Transaksi',
