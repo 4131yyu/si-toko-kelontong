@@ -66,3 +66,9 @@ if (!function_exists('sidebar_active')) {
     </nav>
     <main class="flex-fill p-4" style="background:#f4f6f9; min-height:calc(100vh - 56px);">
         <h4 class="mb-4"><?= isset($title) ? $title : '' ?></h4>
+        <?php if ($this->session->flashdata('success')): ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= $this->session->flashdata('success') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    <?php endif; ?>
