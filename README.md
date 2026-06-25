@@ -120,3 +120,17 @@ index.php
    $config['index_page'] = '';
    $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
    ```
+
+   7. Pastikan `.htaccess` sesuai lokasi project.
+
+   Jika project berada di folder `nama-project`:
+
+   ```apache
+   RewriteBase /nama-project/
+   ```
+
+   Jika project berada langsung di root domain:
+
+   ```apache
+   RewriteBase /
+   ```
