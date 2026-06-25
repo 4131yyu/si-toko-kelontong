@@ -220,3 +220,58 @@ id_transaksi, id_user, kode_transaksi, total_harga, bayar, kembalian, tgl_transa
 detail_transaksi:
 id_detail, id_transaksi, id_produk, jumlah, harga_satuan, subtotal
 ```
+
+## Catatan Penghapusan Transaksi
+
+Jika data transaksi dihapus langsung dari database:
+
+- Riwayat transaksi akan hilang.
+- Laporan penjualan berubah.
+- Dashboard omzet dan transaksi ikut berubah.
+- Detail transaksi bisa ikut terhapus jika relasi memakai `ON DELETE CASCADE`.
+- Stok produk tidak otomatis kembali.
+
+Untuk menjaga akurasi data, lebih aman menggunakan kolom status seperti:
+
+```text
+selesai
+dibatalkan
+```
+
+Dengan pendekatan ini, transaksi tidak langsung dihapus. Jika transaksi dibatalkan, sistem bisa mengembalikan stok produk dan laporan bisa mengabaikan transaksi batal.
+
+## Export PDF
+
+Export laporan penjualan menggunakan TCPDF.
+
+Dependency diinstall menggunakan Composer:
+
+```bash
+composer require tecnickcom/tcpdf
+```
+
+Konfigurasi CodeIgniter:
+
+```php
+$config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
+```
+
+Setelah install, TCPDF berada di:
+
+```text
+vendor/tecnickcom/tcpdf/
+```
+
+## Asset Frontend
+
+Asset lokal yang digunakan:
+
+```text
+assets/css/bootstrap.min.css
+assets/css/style.css
+assets/js/bootstrap.bundle.min.js
+assets/js/jquery-3.7.1.min.js
+assets/js/transaksi.js
+```
+
+Jika menggunakan icon `bi bi-*`, tambahkan Bootstrap Icons. Bisa menggunakan CDN atau file lokal Bootstrap Icons.
