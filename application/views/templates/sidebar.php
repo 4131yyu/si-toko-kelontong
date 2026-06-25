@@ -50,6 +50,11 @@ if (!function_exists('sidebar_active')) {
                 </a>
             </li>
             <?php if ($role === 'admin'): ?>
+            <li>
+                <a href="<?= base_url('Laporan') ?>" class="nav-link text-white <?= sidebar_active('Laporan') ?>">
+                    <i class="bi bi-file-earmark-pdf me-2"></i> Laporan
+                </a>
+            </li>   
 
 
         </ul>
