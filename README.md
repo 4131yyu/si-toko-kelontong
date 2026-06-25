@@ -77,4 +77,16 @@ index.php
    composer install
    ```
 
-   
+   4. Import database.
+
+   Gunakan phpMyAdmin atau MySQL CLI untuk import:
+
+   ```text
+   database/toko_kelontong.sql
+   ```
+
+   Nama database yang digunakan:
+
+   ```text
+   toko_kelontong
+   ```
