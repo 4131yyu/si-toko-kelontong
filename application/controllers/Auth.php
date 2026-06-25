@@ -22,14 +22,14 @@ class Auth extends CI_Controller{
             $sess = [
                 'logged_in'     => TRUE,
                 'id_user'       => $user->id_user,
-                'username'      => $user->$username,
+                'username'      => $user->username,
                 'nama_lengkap'  => $user->nama_lengkap,
                 'role'          => $user->role,
             ];
             $this->session->set_userdata($sess);
             redirect('Dashboard');
         }else{
-            $this->session->set_userdata('error', 'Username atau password salah!');
+            $this->session->set_flashdata('error', 'Username atau password salah!');
             redirect('Auth');
         }
     }
