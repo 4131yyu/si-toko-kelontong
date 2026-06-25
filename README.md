@@ -56,3 +56,11 @@ index.php
 - XAMPP direkomendasikan untuk penggunaan lokal.
 
 ## Instalasi
+
+1. Clone atau salin project ke folder web server.
+
+   Contoh menggunakan XAMPP:
+
+   ```bash
+   C:\xampp\htdocs\nama-project
+   ```
