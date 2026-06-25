@@ -1,0 +1,1 @@
+<?php $is_edit = isset($user) && $user; ?>
