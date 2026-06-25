@@ -54,3 +54,5 @@ index.php
 - Apache dengan `mod_rewrite` aktif.
 - Composer.
 - XAMPP direkomendasikan untuk penggunaan lokal.
+
+## Instalasi
