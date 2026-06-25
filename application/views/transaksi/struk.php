@@ -58,9 +58,9 @@
                     <a href="<?= base_url('Transaksi') ?>" class="btn btn-primary">
                         <i class="bi bi-cart-plus"></i> Transaksi Baru
                     </a>
-                    <button onclick="window.print()" class="btn btn-outline-secondary">
+                    <a href="<?= base_url('Transaksi/cetak/' . $transaksi->id_transaksi) ?>"target="_blank"class="btn btn-outline-secondary">
                         <i class="bi bi-printer"></i> Cetak
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
