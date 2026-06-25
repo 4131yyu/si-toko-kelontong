@@ -273,3 +273,5 @@ assets/js/bootstrap.bundle.min.js
 assets/js/jquery-3.7.1.min.js
 assets/js/transaksi.js
 ```
+
+Jika menggunakan icon `bi bi-*`, tambahkan Bootstrap Icons. Bisa menggunakan CDN atau file lokal Bootstrap Icons.
