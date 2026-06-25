@@ -9,3 +9,4 @@ Aplikasi kasir dan manajemen toko berbasis CodeIgniter 3. Aplikasi ini digunakan
 - Role `kasir` untuk memproses transaksi penjualan.
 - Manajemen kategori produk.
 - Manajemen produk, stok, harga beli, dan harga jual.
+- Transaksi kasir dengan perhitungan total belanja dan kembalian.
