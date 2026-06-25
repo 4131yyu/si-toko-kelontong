@@ -44,6 +44,11 @@ if (!function_exists('sidebar_active')) {
                     <i class="bi bi-cart-plus me-2"></i> Transaksi
                 </a>
             </li>
+            <li>
+                <a href="<?= base_url('Transaksi/riwayat') ?>" class="nav-link text-white <?= sidebar_active('Transaksi', 'riwayat') ?>">
+                    <i class="bi bi-clock-history me-2"></i> Riwayat Transaksi
+                </a>
+            </li>
 
 
         </ul>
