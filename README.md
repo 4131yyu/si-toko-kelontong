@@ -255,3 +255,9 @@ Konfigurasi CodeIgniter:
 ```php
 $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
 ```
+
+Setelah install, TCPDF berada di:
+
+```text
+vendor/tecnickcom/tcpdf/
+```
