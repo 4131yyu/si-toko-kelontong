@@ -54,3 +54,169 @@ index.php
 - Apache dengan `mod_rewrite` aktif.
 - Composer.
 - XAMPP direkomendasikan untuk penggunaan lokal.
+
+## Instalasi
+
+1. Clone atau salin project ke folder web server.
+
+   Contoh menggunakan XAMPP:
+
+   ```bash
+   C:\xampp\htdocs\nama-project
+   ```
+
+   2. Masuk ke root project.
+
+   ```bash
+   cd C:\xampp\htdocs\nama-project
+   ```
+
+   3. Install dependency Composer.
+
+   ```bash
+   composer install
+   ```
+
+   4. Import database.
+
+   Gunakan phpMyAdmin atau MySQL CLI untuk import:
+
+   ```text
+   database/toko_kelontong.sql
+   ```
+
+   Nama database yang digunakan:
+
+   ```text
+   toko_kelontong
+   ```
+
+   5. Sesuaikan konfigurasi database di:
+
+   ```text
+   application/config/database.php
+   ```
+
+   Contoh konfigurasi lokal XAMPP:
+
+   ```php
+   'hostname' => 'localhost',
+   'username' => 'root',
+   'password' => '',
+   'database' => 'toko_kelontong',
+   'dbdriver' => 'mysqli',
+   ```
+
+   6. Sesuaikan base URL di:
+
+   ```text
+   application/config/config.php
+   ```
+
+   Contoh:
+
+   ```php
+   $config['base_url'] = 'http://localhost/nama-project/';
+   $config['index_page'] = '';
+   $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
+   ```
+
+   7. Pastikan `.htaccess` sesuai lokasi project.
+
+   Jika project berada di folder `nama-project`:
+
+   ```apache
+   RewriteBase /nama-project/
+   ```
+
+   Jika project berada langsung di root domain:
+
+   ```apache
+   RewriteBase /
+   ```
+
+   8. Jalankan Apache dan MySQL, lalu buka aplikasi melalui browser.
+
+   ```text
+   http://localhost/nama-project/
+   ```
+
+   ## Akun Default
+
+```text
+Admin
+Username: admin
+Password: admin123
+
+Kasir
+Username: kasir1
+Password: kasir123
+```
+
+## Alur Penggunaan
+
+### Admin
+
+1. Login menggunakan akun admin.
+2. Buka dashboard untuk melihat ringkasan toko.
+3. Kelola kategori produk di menu `Kategori`.
+4. Kelola produk di menu `Produk`.
+5. Kelola user admin/kasir di menu `Manajemen User`.
+6. Lihat riwayat transaksi di menu `Riwayat Transaksi`.
+7. Buka `Laporan` untuk melihat penjualan berdasarkan tanggal.
+8. Klik export PDF untuk mencetak laporan penjualan.
+
+### Kasir
+
+1. Login menggunakan akun kasir.
+2. Buka menu `Transaksi`.
+3. Pilih produk.
+4. Masukkan jumlah item.
+5. Tambahkan item lain jika diperlukan.
+6. Masukkan nominal bayar.
+7. Klik `Proses Transaksi`.
+8. Sistem akan menyimpan transaksi, menyimpan detail transaksi, menghitung kembalian, dan mengurangi stok produk.
+9. Struk transaksi akan ditampilkan setelah transaksi berhasil.
+
+## Alur Data Transaksi
+
+Saat transaksi diproses, sistem melakukan beberapa proses:
+
+- Menyimpan data utama ke tabel `transaksi`.
+- Menyimpan item belanja ke tabel `detail_transaksi`.
+- Mengurangi stok produk di tabel `produk`.
+- Menampilkan struk transaksi.
+- Data transaksi muncul di riwayat dan laporan.
+
+Jika transaksi hanya disusun di halaman kasir tetapi belum klik `Proses Transaksi`, data belum tersimpan ke database.
+
+## Tabel Database
+
+Project ini menggunakan tabel utama berikut:
+
+```text
+users
+kategori
+produk
+transaksi
+detail_transaksi
+```
+
+Kolom penting:
+
+```text
+users:
+id_user, username, password, nama_lengkap, role, created_at
+
+kategori:
+id_kategori, nama_kategori, deskripsi
+
+produk:
+id_produk, id_kategori, nama_produk, stok, harga_beli, harga_jual
+
+transaksi:
+id_transaksi, id_user, kode_transaksi, total_harga, bayar, kembalian, tgl_transaksi
+
+detail_transaksi:
+id_detail, id_transaksi, id_produk, jumlah, harga_satuan, subtotal
+```
