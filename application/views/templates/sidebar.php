@@ -22,6 +22,12 @@ if (!function_exists('sidebar_active')) {
 <nav class="sidebar bg-dark" style="width:240px; min-height:calc(100vh - 56px);">
     <div class="d-flex flex-column p-3">
         <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="<?= base_url('Dashboard') ?>" class="nav-link text-white <?= sidebar_active('Dashboard') ?>">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+            </li>
+
 
         </ul>
 
