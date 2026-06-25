@@ -243,3 +243,9 @@ Dengan pendekatan ini, transaksi tidak langsung dihapus. Jika transaksi dibatalk
 ## Export PDF
 
 Export laporan penjualan menggunakan TCPDF.
+
+Dependency diinstall menggunakan Composer:
+
+```bash
+composer require tecnickcom/tcpdf
+```
