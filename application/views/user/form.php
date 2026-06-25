@@ -15,3 +15,9 @@
                 <input type="text" name="nama_lengkap" class="form-control"
                 value="<?= $is_edit ? $user->nama_lengkap : ''?>" required>
 </div>
+<div class="mb-3">
+                <label class="form-label">
+                    Password <?= $is_edit ? '(kosongkan jika tidak ingin mengubah)' : '' ?>
+                </label>
+                <input type="password" name="password" class="form-control" <?= $is_edit ? '' : 'required' ?>>
+            </div>
