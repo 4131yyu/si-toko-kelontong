@@ -249,3 +249,9 @@ Dependency diinstall menggunakan Composer:
 ```bash
 composer require tecnickcom/tcpdf
 ```
+
+Konfigurasi CodeIgniter:
+
+```php
+$config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
+```
