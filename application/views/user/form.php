@@ -4,3 +4,9 @@
         <?= $is_edit ? 'Edit User' : 'Tambah User' ?>
     </div>
     <div class="card-body">
+        <form action="<?= $is_edit ? base_url('User/update/' . $user->id_user) : base_url('User/simpan') ?>" method="post">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" class="form-control"
+                       value="<?= $is_edit ? $user->username : '' ?>" required>
+            </div>
