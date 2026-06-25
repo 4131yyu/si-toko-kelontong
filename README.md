@@ -64,3 +64,9 @@ index.php
    ```bash
    C:\xampp\htdocs\nama-project
    ```
+
+   2. Masuk ke root project.
+
+   ```bash
+   cd C:\xampp\htdocs\nama-project
+   ```
