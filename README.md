@@ -26,3 +26,23 @@ Aplikasi kasir dan manajemen toko berbasis CodeIgniter 3. Aplikasi ini digunakan
 - Composer
 - TCPDF
 - Apache/XAMPP untuk lingkungan lokal
+
+## Struktur Project
+
+```text
+application/
+  config/
+  controllers/
+  models/
+  views/
+assets/
+  css/
+  js/
+database/
+system/
+vendor/
+composer.json
+composer.lock
+index.php
+.htaccess
+```
