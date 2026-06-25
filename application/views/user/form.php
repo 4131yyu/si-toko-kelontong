@@ -21,3 +21,10 @@
                 </label>
                 <input type="password" name="password" class="form-control" <?= $is_edit ? '' : 'required' ?>>
             </div>
+            <div class="mb-3">
+                <label class="form-label">Role</label>
+                <select name="role" class="form-select" required>
+                    <option value="kasir" <?= ($is_edit && $user->role === 'kasir') ? 'selected' : '' ?>>Kasir</option>
+                    <option value="admin" <?= ($is_edit && $user->role === 'admin') ? 'selected' : '' ?>>Admin</option>
+                </select>
+            </div>
