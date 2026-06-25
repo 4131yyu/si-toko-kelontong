@@ -39,6 +39,11 @@ if (!function_exists('sidebar_active')) {
                 </a>
             </li>
             <?php endif; ?>
+            <li>
+                <a href="<?= base_url('Transaksi') ?>" class="nav-link text-white <?= $current_controller === 'transaksi' && $current_method !== 'riwayat' ? 'active' : '' ?>">
+                    <i class="bi bi-cart-plus me-2"></i> Transaksi
+                </a>
+            </li>
 
 
         </ul>
