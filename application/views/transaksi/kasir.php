@@ -71,6 +71,9 @@
             <button type="submit" class="btn btn-success">
                 <i class="bi bi-check-circle"></i> Proses Transaksi
             </button>
+            <button type="button" class="btn btn-outline-danger btn mx-3" id="btn-reset-row">
+                <i class="bi bi-arrow-counterclockwise"></i> Reset Pilihan
+            </button>
         </form>
     </div>
 </div>
