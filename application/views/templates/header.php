@@ -36,4 +36,4 @@
         </div>
     </div>
 </nav>
-</div class="d-flex" style="margin-top:56px;">  
+<div class="d-flex" style="margin-top:56px;">  
