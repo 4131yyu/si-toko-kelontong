@@ -1,5 +1,5 @@
-<div>
-    <div>
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
         <form action="<?= base_url('laporan') ?>" method="get">
             <div class="col-md-3">
                 <label class="form-label">Tanggal Awal</label>
