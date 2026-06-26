@@ -5,7 +5,7 @@
                 <label class="form-label">Tanggal Awal</label>
                 <input type="date" name="tgl_awal" class="form-control" value="<?= $tgl_awal ?>">
             </div>
-            <div>
+            <div class="col-md-3">
                 <label class="form-label">Tanggal Akhir</label>
                 <input type="date" name="tgl_akhir" class="form-control" value="<?= $tgl_akhir ?>">
             </div>
