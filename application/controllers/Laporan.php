@@ -40,7 +40,18 @@ class Laporan extends CI_Controller {
         $total = 0;
         foreach ($transaksi as $t) $total += $t->total_harga;
 
-        require_once APPPATH . 'third_party/tcpdf/tcpdf.php';
+        if (!class_exists('TCPDF', false)) {
+            $tcpdf_path = APPPATH . 'third_party/tcpdf/tcpdf.php';
+            // $tcpdf_path = FCPATH . 'vendor/autoload.php';
+            if (file_exists($tcpdf_path)) {
+                require_once $tcpdf_path;
+            }
+        }
+
+        if (!class_exists('TCPDF')) {
+            $this->session->set_flashdata('error', 'Library TCPDF belum tersedia. Jalankan composer require tecnickcom/tcpdf dari root project.');
+            redirect('Laporan?tgl_awal=' . $tgl_awal . '&tgl_akhir=' . $tgl_akhir);
+        }
         $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
         $pdf->SetCreator('Toko Kelontong');
         $pdf->SetTitle('Laporan Penjualan');
