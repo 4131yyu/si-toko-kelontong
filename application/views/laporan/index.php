@@ -1,6 +1,6 @@
 <div class="card shadow-sm mb-3">
     <div class="card-body">
-        <form action="<?= base_url('laporan') ?>" method="get">
+        <form action="<?= base_url('laporan') ?>" method="get" class="row g-3 align-items-end">
             <div class="col-md-3">
                 <label class="form-label">Tanggal Awal</label>
                 <input type="date" name="tgl_awal" class="form-control" value="<?= $tgl_awal ?>">
