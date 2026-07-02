@@ -120,3 +120,10 @@ Atau salin folder project ke direktori web server:
 ```
 C:\xampp\htdocs\si-toko-kelontong\
 ```
+
+### 2. Install Dependency Composer
+
+```bash
+cd si-toko-kelontong
+composer install
+```
