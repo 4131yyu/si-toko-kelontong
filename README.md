@@ -193,3 +193,12 @@ http://localhost/si-toko-kelontong/
 ---
 
 ## Alur Penggunaan
+
+### Admin (Pemilik Toko)
+
+1. Login dengan akun admin.
+2. Buka **Dashboard** untuk melihat ringkasan transaksi, omzet, stok menipis, dan produk terlaris.
+3. Kelola data di menu **Kategori** dan **Produk** (tambah, edit, hapus).
+4. Kelola akun kasir di menu **Manajemen User**.
+5. Pantau transaksi di menu **Riwayat Transaksi**.
+6. Buka **Laporan**, filter berdasarkan tanggal, lalu cetak laporan ke PDF.
