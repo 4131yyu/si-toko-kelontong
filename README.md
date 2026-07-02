@@ -256,3 +256,7 @@ Jika Root Project memiliki composer.lock bisa langsung jalankan:
 ```bash
 composer install --no-dev
 ```
+
+### Asset Frontend
+
+Semua asset (Bootstrap, jQuery, Bootstrap Icons) disimpan secara lokal di folder `assets/` sehingga sistem dapat berjalan tanpa koneksi internet.
