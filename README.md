@@ -136,3 +136,15 @@ Buka **phpMyAdmin** atau gunakan MySQL CLI, lalu buat database baru dan import f
 Nama database : toko_kelontong
 File SQL      : database/toko_kelontong.sql
 ```
+
+### 4. Konfigurasi Database
+
+Edit file `application/config/database.php`:
+
+```php
+'hostname' => 'localhost',
+'username' => 'root',
+'password' => '',
+'database' => 'toko_kelontong',
+'dbdriver' => 'mysqli',
+```
