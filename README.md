@@ -241,3 +241,5 @@ Sistem menggunakan 5 tabel utama dengan relasi sebagai berikut:
 | Ni Wayan Earlene Sartika Putri    | 24010110124 | Dokumentasi (SRS, README, User Manual) |
 
 ---
+
+## Catatan Tambahan
