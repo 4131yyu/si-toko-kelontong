@@ -127,3 +127,12 @@ C:\xampp\htdocs\si-toko-kelontong\
 cd si-toko-kelontong
 composer install
 ```
+
+### 3. Import Database
+
+Buka **phpMyAdmin** atau gunakan MySQL CLI, lalu buat database baru dan import file SQL:
+
+```
+Nama database : toko_kelontong
+File SQL      : database/toko_kelontong.sql
+```
