@@ -243,3 +243,16 @@ Sistem menggunakan 5 tabel utama dengan relasi sebagai berikut:
 ---
 
 ## Catatan Tambahan
+
+### Export PDF
+
+Laporan penjualan menggunakan library **TCPDF** yang diinstall via Composer:
+
+```bash
+composer require tecnickcom/tcpdf
+```
+Jika Root Project memiliki composer.lock bisa langsung jalankan:
+
+```bash
+composer install --no-dev
+```
