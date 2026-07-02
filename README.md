@@ -148,3 +148,13 @@ Edit file `application/config/database.php`:
 'database' => 'toko_kelontong',
 'dbdriver' => 'mysqli',
 ```
+
+### 5. Konfigurasi Base URL
+
+Edit file `application/config/config.php`:
+
+```php
+$config['base_url']         = 'http://localhost/si-toko-kelontong/';
+$config['index_page']       = '';
+$config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
+```
