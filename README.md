@@ -96,3 +96,13 @@ si-toko-kelontong/
 ```
 
 ---
+
+## Kebutuhan Sistem
+
+- PHP 7.4 atau lebih baru (direkomendasikan PHP 8.1+)
+- MySQL / MariaDB
+- Apache dengan `mod_rewrite` aktif
+- Composer
+- XAMPP (direkomendasikan untuk penggunaan lokal)
+
+---
