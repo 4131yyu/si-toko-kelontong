@@ -37,3 +37,19 @@ Sistem ini hadir sebagai solusi digitalisasi yang ringan dan langsung dapat digu
 - **Kasir** — memproses transaksi penjualan secara cepat dan akurat.
 
 ---
+
+## Fitur Sistem
+
+| ID Fitur | Fitur                                                                                | Role         |
+| -------- | ------------------------------------------------------------------------------------ | ------------ |
+| TK-01    | Login multi-role (Admin dan Kasir)                                                   | Admin, Kasir |
+| TK-02    | Dashboard statistik — total transaksi hari ini, omzet, stok menipis, produk terlaris | Admin, Kasir |
+| TK-03    | Manajemen Kategori Produk (CRUD)                                                     | Admin        |
+| TK-04    | Manajemen Produk & Stok Barang (CRUD)                                                | Admin        |
+| TK-05    | Transaksi Penjualan — pilih produk, hitung total & kembalian otomatis, update stok   | Kasir        |
+| TK-06    | Riwayat Transaksi & Detail Struk                                                     | Admin, Kasir |
+| TK-07    | Laporan Penjualan — filter tanggal, cetak/unduh PDF                                  | Admin        |
+| TK-08    | Manajemen User / Akun (CRUD, atur role)                                              | Admin        |
+| TK-09    | Logout dengan konfirmasi sesi                                                        | Admin, Kasir |
+
+---
