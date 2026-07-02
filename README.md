@@ -202,3 +202,15 @@ http://localhost/si-toko-kelontong/
 4. Kelola akun kasir di menu **Manajemen User**.
 5. Pantau transaksi di menu **Riwayat Transaksi**.
 6. Buka **Laporan**, filter berdasarkan tanggal, lalu cetak laporan ke PDF.
+
+### Kasir
+
+1. Login dengan akun kasir.
+2. Buka menu **Transaksi**.
+3. Pilih produk dan masukkan jumlah yang dibeli.
+4. Tambahkan produk lain jika diperlukan.
+5. Masukkan nominal pembayaran — sistem otomatis menghitung kembalian.
+6. Klik **Proses Transaksi**.
+7. Sistem menyimpan transaksi, mengurangi stok, dan menampilkan struk.
+
+---
