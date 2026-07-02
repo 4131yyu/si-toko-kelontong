@@ -191,3 +191,5 @@ http://localhost/si-toko-kelontong/
 | Kasir | `kasir1` | `kasir123` |
 
 ---
+
+## Alur Penggunaan
