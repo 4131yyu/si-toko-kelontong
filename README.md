@@ -108,3 +108,15 @@ si-toko-kelontong/
 ---
 
 ## Instalasi
+
+### 1. Clone Repositori
+
+```bash
+git clone https://github.com/username/si-toko-kelontong.git
+```
+
+Atau salin folder project ke direktori web server:
+
+```
+C:\xampp\htdocs\si-toko-kelontong\
+```
