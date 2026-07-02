@@ -158,3 +158,17 @@ $config['base_url']         = 'http://localhost/si-toko-kelontong/';
 $config['index_page']       = '';
 $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
 ```
+
+### 6. Konfigurasi `.htaccess`
+
+Pastikan nilai `RewriteBase` sesuai dengan nama folder project:
+
+```apache
+RewriteBase /si-toko-kelontong/
+```
+
+Jika project berada langsung di root domain:
+
+```apache
+RewriteBase /
+```
