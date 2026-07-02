@@ -5,3 +5,9 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
 ![License](https://img.shields.io/badge/License-Academic-blue)
+
+Aplikasi kasir dan manajemen toko kelontong berbasis web yang dikembangkan menggunakan framework **CodeIgniter 3** dengan arsitektur **MVC**. Sistem ini mengotomatisasi dan menyederhanakan proses operasional toko kelontong, mulai dari manajemen produk dan stok, transaksi penjualan, hingga pembuatan laporan penjualan dalam format PDF.
+
+> Proyek UAS Mata Kuliah Pemrograman Web — Program Studi S1 Ilmu Komputer, Fakultas Teknik, Universitas Bumigora 2026.
+
+---
