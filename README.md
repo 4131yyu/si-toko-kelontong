@@ -65,3 +65,34 @@ Sistem ini hadir sebagai solusi digitalisasi yang ringan dan langsung dapat digu
 | Server Lokal | Apache + XAMPP                                                    |
 
 ---
+
+## Struktur Proyek
+
+```
+si-toko-kelontong/
+├── application/
+│   ├── config/          # Konfigurasi CI3 (database, routes, dll)
+│   ├── controllers/     # Auth, Dashboard, Kategori, Produk, Transaksi, Laporan, User
+│   ├── models/          # Model untuk setiap tabel database
+│   └── views/
+│       ├── templates/   # header.php, sidebar.php, footer.php
+│       ├── dashboard/
+│       ├── kategori/
+│       ├── produk/
+│       ├── transaksi/
+│       ├── laporan/
+│       └── user/
+├── assets/
+│   ├── css/             # Bootstrap 5, Bootstrap Icons, style.css
+│   └── js/              # Bootstrap bundle, jQuery, transaksi.js
+├── database/
+│   └── toko_kelontong.sql
+├── system/              # Core CodeIgniter 3
+├── vendor/              # TCPDF & dependency Composer
+├── composer.json
+├── composer.lock
+├── index.php
+└── .htaccess
+```
+
+---
