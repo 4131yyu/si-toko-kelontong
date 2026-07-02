@@ -230,3 +230,14 @@ Sistem menggunakan 5 tabel utama dengan relasi sebagai berikut:
 > **Catatan:** Kolom `harga_satuan` di tabel `detail_transaksi` menyimpan harga pada saat transaksi terjadi — bukan mengambil dari tabel produk secara langsung — sehingga riwayat transaksi tetap akurat meskipun harga produk berubah di kemudian hari.
 
 ---
+
+## Anggota Tim
+
+| Nama                              | NIM         | Peran                                  |
+| --------------------------------- | ----------- | -------------------------------------- |
+| Ni Putu Febriana Pradipta Ningrat | 24010110092 | Desain UI/UX                           |
+| Muhammad Abiyyu Salam             | 24010110085 | Front-End (Views & Template CI3)       |
+| M. Amru Ramadan                   | 24010110106 | Back-End (Controller, Model, Database) |
+| Ni Wayan Earlene Sartika Putri    | 24010110124 | Dokumentasi (SRS, README, User Manual) |
+
+---
