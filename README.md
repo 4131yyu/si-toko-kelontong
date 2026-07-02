@@ -53,3 +53,15 @@ Sistem ini hadir sebagai solusi digitalisasi yang ringan dan langsung dapat digu
 | TK-09    | Logout dengan konfirmasi sesi                                                        | Admin, Kasir |
 
 ---
+
+## Teknologi
+
+| Layer        | Teknologi                                                         |
+| ------------ | ----------------------------------------------------------------- |
+| Backend      | PHP 8.1+, CodeIgniter 3 (MVC)                                     |
+| Frontend     | HTML, CSS, Bootstrap 5, Bootstrap Icons, JavaScript, jQuery 3.7.1 |
+| Database     | MySQL / MariaDB                                                   |
+| PDF          | TCPDF (via Composer)                                              |
+| Server Lokal | Apache + XAMPP                                                    |
+
+---
