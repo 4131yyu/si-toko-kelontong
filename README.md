@@ -26,3 +26,14 @@ Aplikasi kasir dan manajemen toko kelontong berbasis web yang dikembangkan mengg
 - [Anggota Tim](#-anggota-tim)
 
 ---
+
+## Latar Belakang
+
+Toko kelontong merupakan salah satu jenis usaha yang paling umum di Indonesia, namun mayoritas masih dikelola secara manual. Permasalahan yang sering terjadi meliputi stok barang yang tidak terpantau, kesalahan hitung saat transaksi, serta tidak adanya laporan keuangan yang terstruktur.
+
+Sistem ini hadir sebagai solusi digitalisasi yang ringan dan langsung dapat digunakan, dengan dua peran pengguna:
+
+- **Admin / Pemilik Toko** — mengelola seluruh data dan melihat laporan bisnis.
+- **Kasir** — memproses transaksi penjualan secara cepat dan akurat.
+
+---
