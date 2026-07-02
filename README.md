@@ -182,3 +182,12 @@ http://localhost/si-toko-kelontong/
 ```
 
 ---
+
+## Akun Uji Coba
+
+| Role  | Username | Password   |
+| ----- | -------- | ---------- |
+| Admin | `admin`  | `admin123` |
+| Kasir | `kasir1` | `kasir123` |
+
+---
