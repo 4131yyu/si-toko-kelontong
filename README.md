@@ -214,3 +214,19 @@ http://localhost/si-toko-kelontong/
 7. Sistem menyimpan transaksi, mengurangi stok, dan menampilkan struk.
 
 ---
+
+## Skema Database
+
+Sistem menggunakan 5 tabel utama dengan relasi sebagai berikut:
+
+| Tabel              | Deskripsi                                                 |
+| ------------------ | --------------------------------------------------------- |
+| `users`            | Data akun login (username, password MD5, role)            |
+| `kategori`         | Pengelompokan produk                                      |
+| `produk`           | Data barang (nama, stok, harga beli, harga jual)          |
+| `transaksi`        | Header transaksi (kode unik, total, bayar, kembalian)     |
+| `detail_transaksi` | Item per transaksi (produk, jumlah, harga saat transaksi) |
+
+> **Catatan:** Kolom `harga_satuan` di tabel `detail_transaksi` menyimpan harga pada saat transaksi terjadi — bukan mengambil dari tabel produk secara langsung — sehingga riwayat transaksi tetap akurat meskipun harga produk berubah di kemudian hari.
+
+---
