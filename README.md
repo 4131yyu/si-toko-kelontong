@@ -106,3 +106,5 @@ si-toko-kelontong/
 - XAMPP (direkomendasikan untuk penggunaan lokal)
 
 ---
+
+## Instalasi
