@@ -172,3 +172,13 @@ Jika project berada langsung di root domain:
 ```apache
 RewriteBase /
 ```
+
+### 7. Jalankan Aplikasi
+
+Aktifkan Apache dan MySQL di XAMPP, lalu buka browser:
+
+```
+http://localhost/si-toko-kelontong/
+```
+
+---
