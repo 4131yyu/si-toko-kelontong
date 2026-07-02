@@ -11,3 +11,18 @@ Aplikasi kasir dan manajemen toko kelontong berbasis web yang dikembangkan mengg
 > Proyek UAS Mata Kuliah Pemrograman Web — Program Studi S1 Ilmu Komputer, Fakultas Teknik, Universitas Bumigora 2026.
 
 ---
+
+## Daftar Isi
+
+- [Latar Belakang](#-latar-belakang)
+- [Fitur Sistem](#-fitur-sistem)
+- [Teknologi](#-teknologi)
+- [Struktur Proyek](#-struktur-proyek)
+- [Kebutuhan Sistem](#-kebutuhan-sistem)
+- [Instalasi](#-instalasi)
+- [Akun Uji Coba](#-akun-uji-coba)
+- [Alur Penggunaan](#-alur-penggunaan)
+- [Skema Database](#-skema-database)
+- [Anggota Tim](#-anggota-tim)
+
+---
